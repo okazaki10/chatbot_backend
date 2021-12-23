@@ -14,7 +14,7 @@ with open('tokenizer.pickle', 'rb') as handle:
 def index():
     chat = request.args.get('chat', default="")
     maxlen = 100
-    kolom = ['tag_0', 'tag_1', 'tag_2','tag_3']
+    kolom = ['tag_bipolar','tag_depresi','tag_insomnia','tag_kecemasan','tag_skizofrenia']
     text_predict = [chat]
     seq = tokenizer.texts_to_sequences(text_predict)
     padded = pad_sequences(seq, maxlen=maxlen)
